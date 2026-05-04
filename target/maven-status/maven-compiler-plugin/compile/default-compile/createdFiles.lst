@@ -1,0 +1,12 @@
+com\srm\demoblaze\pages\ProductDetailPage.class
+com\srm\demoblaze\utils\ScreenshotUtils.class
+com\srm\demoblaze\config\ConfigReader.class
+com\srm\demoblaze\pages\OrderModalPage.class
+com\srm\demoblaze\pages\LoginModalPage.class
+com\srm\demoblaze\model\UserCredentials.class
+com\srm\demoblaze\pages\BasePage.class
+com\srm\demoblaze\pages\SignUpModalPage.class
+com\srm\demoblaze\driver\DriverFactory.class
+com\srm\demoblaze\pages\HomePage.class
+com\srm\demoblaze\pages\CartPage.class
+com\srm\demoblaze\model\OrderDetails.class

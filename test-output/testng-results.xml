@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="17" passed="16" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-18T20:38:08 IST" name="DemoBlaze Automation Suite" finished-at="2026-04-18T20:42:31 IST" duration-ms="263752">
+    <groups>
+    </groups>
+    <test started-at="2026-04-18T20:38:08 IST" name="DemoBlaze Functional Tests" finished-at="2026-04-18T20:42:31 IST" duration-ms="263752">
+      <class name="com.srm.demoblaze.tests.CartTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.CartTests@5bda8e08]" started-at="2026-04-18T20:39:25 IST" name="setUp" finished-at="2026-04-18T20:39:30 IST" duration-ms="4894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyCartTotalUpdatesAfterDeletion()[pri:0, instance:com.srm.demoblaze.tests.CartTests@5bda8e08]" started-at="2026-04-18T20:39:30 IST" name="verifyCartTotalUpdatesAfterDeletion" description="Verify the total price in the cart updates correctly after deletion" finished-at="2026-04-18T20:39:57 IST" duration-ms="26830" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCartTotalUpdatesAfterDeletion -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.CartTests@5bda8e08]" started-at="2026-04-18T20:39:57 IST" name="tearDown" finished-at="2026-04-18T20:39:57 IST" duration-ms="414" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.CartTests@5bda8e08]" started-at="2026-04-18T20:39:57 IST" name="setUp" finished-at="2026-04-18T20:40:02 IST" duration-ms="4709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyDeletingAProductRemovesItFromCart()[pri:0, instance:com.srm.demoblaze.tests.CartTests@5bda8e08]" started-at="2026-04-18T20:40:02 IST" name="verifyDeletingAProductRemovesItFromCart" description="Delete one product from the cart and verify it no longer appears" finished-at="2026-04-18T20:40:26 IST" duration-ms="24324" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The remaining product should still be present in the cart. expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The remaining product should still be present in the cart. expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.srm.demoblaze.tests.CartTests.verifyDeletingAProductRemovesItFromCart(CartTests.java:56)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeletingAProductRemovesItFromCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.CartTests@5bda8e08]" started-at="2026-04-18T20:40:27 IST" name="tearDown" finished-at="2026-04-18T20:40:27 IST" duration-ms="532" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.CartTests@5bda8e08]" started-at="2026-04-18T20:40:27 IST" name="setUp" finished-at="2026-04-18T20:40:32 IST" duration-ms="5144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySingleProductCanBeAddedToCart()[pri:0, instance:com.srm.demoblaze.tests.CartTests@5bda8e08]" started-at="2026-04-18T20:40:32 IST" name="verifySingleProductCanBeAddedToCart" description="Add a product to cart and verify it appears in the Cart page with the correct name and price" finished-at="2026-04-18T20:40:52 IST" duration-ms="19155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySingleProductCanBeAddedToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.CartTests@5bda8e08]" started-at="2026-04-18T20:40:52 IST" name="tearDown" finished-at="2026-04-18T20:40:52 IST" duration-ms="389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.CartTests@5bda8e08]" started-at="2026-04-18T20:40:52 IST" name="setUp" finished-at="2026-04-18T20:40:57 IST" duration-ms="4637" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyTwoProductsAppearInCart()[pri:0, instance:com.srm.demoblaze.tests.CartTests@5bda8e08]" started-at="2026-04-18T20:40:57 IST" name="verifyTwoProductsAppearInCart" description="Add two products and verify both appear in the cart" finished-at="2026-04-18T20:41:20 IST" duration-ms="23271" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTwoProductsAppearInCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.CartTests@5bda8e08]" started-at="2026-04-18T20:41:20 IST" name="tearDown" finished-at="2026-04-18T20:41:20 IST" duration-ms="418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.srm.demoblaze.tests.CartTests -->
+      <class name="com.srm.demoblaze.tests.ProductBrowseTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.ProductBrowseTests@3eb738bb]" started-at="2026-04-18T20:38:56 IST" name="setUp" finished-at="2026-04-18T20:39:01 IST" duration-ms="4685" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyHomeLinkReloadsFullProductListing()[pri:0, instance:com.srm.demoblaze.tests.ProductBrowseTests@3eb738bb]" started-at="2026-04-18T20:39:01 IST" name="verifyHomeLinkReloadsFullProductListing" description="Verify clicking the Home link reloads the full product listing" finished-at="2026-04-18T20:39:04 IST" duration-ms="3334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomeLinkReloadsFullProductListing -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.ProductBrowseTests@3eb738bb]" started-at="2026-04-18T20:39:04 IST" name="tearDown" finished-at="2026-04-18T20:39:05 IST" duration-ms="335" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.ProductBrowseTests@3eb738bb]" started-at="2026-04-18T20:39:05 IST" name="setUp" finished-at="2026-04-18T20:39:10 IST" duration-ms="5072" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLaptopsCategoryShowsLaptopProducts()[pri:0, instance:com.srm.demoblaze.tests.ProductBrowseTests@3eb738bb]" started-at="2026-04-18T20:39:10 IST" name="verifyLaptopsCategoryShowsLaptopProducts" description="Click the Laptops category and verify laptop products are listed" finished-at="2026-04-18T20:39:11 IST" duration-ms="1541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLaptopsCategoryShowsLaptopProducts -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.ProductBrowseTests@3eb738bb]" started-at="2026-04-18T20:39:11 IST" name="tearDown" finished-at="2026-04-18T20:39:12 IST" duration-ms="328" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.ProductBrowseTests@3eb738bb]" started-at="2026-04-18T20:39:12 IST" name="setUp" finished-at="2026-04-18T20:39:16 IST" duration-ms="4650" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyPhonesCategoryShowsPhoneProducts()[pri:0, instance:com.srm.demoblaze.tests.ProductBrowseTests@3eb738bb]" started-at="2026-04-18T20:39:16 IST" name="verifyPhonesCategoryShowsPhoneProducts" description="Click the Phones category and verify phone products are listed" finished-at="2026-04-18T20:39:18 IST" duration-ms="1560" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPhonesCategoryShowsPhoneProducts -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.ProductBrowseTests@3eb738bb]" started-at="2026-04-18T20:39:18 IST" name="tearDown" finished-at="2026-04-18T20:39:18 IST" duration-ms="337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.ProductBrowseTests@3eb738bb]" started-at="2026-04-18T20:39:18 IST" name="setUp" finished-at="2026-04-18T20:39:22 IST" duration-ms="4080" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyProductDetailsAreDisplayed()[pri:0, instance:com.srm.demoblaze.tests.ProductBrowseTests@3eb738bb]" started-at="2026-04-18T20:39:22 IST" name="verifyProductDetailsAreDisplayed" description="Click on a product and verify the product name, price, and description are shown" finished-at="2026-04-18T20:39:25 IST" duration-ms="2536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductDetailsAreDisplayed -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.ProductBrowseTests@3eb738bb]" started-at="2026-04-18T20:39:25 IST" name="tearDown" finished-at="2026-04-18T20:39:25 IST" duration-ms="312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.srm.demoblaze.tests.ProductBrowseTests -->
+      <class name="com.srm.demoblaze.tests.AuthenticationTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.AuthenticationTests@c730b35]" started-at="2026-04-18T20:38:10 IST" name="setUp" finished-at="2026-04-18T20:38:18 IST" duration-ms="7548" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLoginUsingExcelData(com.srm.demoblaze.model.UserCredentials,boolean,java.lang.String)[pri:0, instance:com.srm.demoblaze.tests.AuthenticationTests@c730b35]" started-at="2026-04-18T20:38:18 IST" name="verifyLoginUsingExcelData" description="Verify login using Excel-based credentials with a fresh signup before login" data-provider="loginScenarios" finished-at="2026-04-18T20:38:25 IST" duration-ms="7636" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.srm.demoblaze.model.UserCredentials@aaa0f76]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Welcome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginUsingExcelData -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.AuthenticationTests@c730b35]" started-at="2026-04-18T20:38:25 IST" name="tearDown" finished-at="2026-04-18T20:38:26 IST" duration-ms="499" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.AuthenticationTests@c730b35]" started-at="2026-04-18T20:38:26 IST" name="setUp" finished-at="2026-04-18T20:38:30 IST" duration-ms="3833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLoginUsingExcelData(com.srm.demoblaze.model.UserCredentials,boolean,java.lang.String)[pri:0, instance:com.srm.demoblaze.tests.AuthenticationTests@c730b35]" started-at="2026-04-18T20:38:30 IST" name="verifyLoginUsingExcelData" description="Verify login using Excel-based credentials with a fresh signup before login" data-provider="loginScenarios" finished-at="2026-04-18T20:38:35 IST" duration-ms="5585" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.srm.demoblaze.model.UserCredentials@aaa0f76]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Wrong password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginUsingExcelData -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.AuthenticationTests@c730b35]" started-at="2026-04-18T20:38:35 IST" name="tearDown" finished-at="2026-04-18T20:38:36 IST" duration-ms="341" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.AuthenticationTests@c730b35]" started-at="2026-04-18T20:38:36 IST" name="setUp" finished-at="2026-04-18T20:38:40 IST" duration-ms="4183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLogoutRemovesUsernameFromNavbar()[pri:0, instance:com.srm.demoblaze.tests.AuthenticationTests@c730b35]" started-at="2026-04-18T20:38:40 IST" name="verifyLogoutRemovesUsernameFromNavbar" description="Verify logout removes username" finished-at="2026-04-18T20:38:48 IST" duration-ms="7848" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogoutRemovesUsernameFromNavbar -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.AuthenticationTests@c730b35]" started-at="2026-04-18T20:38:48 IST" name="tearDown" finished-at="2026-04-18T20:38:48 IST" duration-ms="362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.AuthenticationTests@c730b35]" started-at="2026-04-18T20:38:48 IST" name="setUp" finished-at="2026-04-18T20:38:53 IST" duration-ms="4493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySuccessfulSignupWithUniqueCredentials()[pri:0, instance:com.srm.demoblaze.tests.AuthenticationTests@c730b35]" started-at="2026-04-18T20:38:53 IST" name="verifySuccessfulSignupWithUniqueCredentials" description="Verify successful sign-up with a unique username derived from Excel data" finished-at="2026-04-18T20:38:56 IST" duration-ms="3524" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySuccessfulSignupWithUniqueCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.AuthenticationTests@c730b35]" started-at="2026-04-18T20:38:56 IST" name="tearDown" finished-at="2026-04-18T20:38:56 IST" duration-ms="325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.srm.demoblaze.tests.AuthenticationTests -->
+      <class name="com.srm.demoblaze.tests.OrderTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.OrderTests@1e800aaa]" started-at="2026-04-18T20:41:20 IST" name="setUp" finished-at="2026-04-18T20:41:25 IST" duration-ms="4606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyOrderBehaviorWithEmptyNameAndCreditCardFields()[pri:0, instance:com.srm.demoblaze.tests.OrderTests@1e800aaa]" started-at="2026-04-18T20:41:25 IST" name="verifyOrderBehaviorWithEmptyNameAndCreditCardFields" description="Attempt to place an order with empty name and credit card fields and verify the current application behavior" finished-at="2026-04-18T20:41:41 IST" duration-ms="16645" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOrderBehaviorWithEmptyNameAndCreditCardFields -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.OrderTests@1e800aaa]" started-at="2026-04-18T20:41:41 IST" name="tearDown" finished-at="2026-04-18T20:41:42 IST" duration-ms="389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.OrderTests@1e800aaa]" started-at="2026-04-18T20:41:42 IST" name="setUp" finished-at="2026-04-18T20:41:47 IST" duration-ms="4655" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyOrderPlacementShowsConfirmationAndOrderId()[pri:0, instance:com.srm.demoblaze.tests.OrderTests@1e800aaa]" started-at="2026-04-18T20:41:47 IST" name="verifyOrderPlacementShowsConfirmationAndOrderId" description="Place an order using Excel order details and verify the thank-you confirmation message and order ID" finished-at="2026-04-18T20:42:06 IST" duration-ms="19202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOrderPlacementShowsConfirmationAndOrderId -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.OrderTests@1e800aaa]" started-at="2026-04-18T20:42:06 IST" name="tearDown" finished-at="2026-04-18T20:42:06 IST" duration-ms="415" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.srm.demoblaze.tests.OrderTests -->
+      <class name="com.srm.demoblaze.tests.FormValidationTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.FormValidationTests@185a6e9]" started-at="2026-04-18T20:42:06 IST" name="setUp" finished-at="2026-04-18T20:42:11 IST" duration-ms="4624" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyEmptyUsernameShowsLoginAlert()[pri:0, instance:com.srm.demoblaze.tests.FormValidationTests@185a6e9]" started-at="2026-04-18T20:42:11 IST" name="verifyEmptyUsernameShowsLoginAlert" description="Attempt to log in with an empty username and verify the alert behavior" finished-at="2026-04-18T20:42:12 IST" duration-ms="1273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmptyUsernameShowsLoginAlert -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.FormValidationTests@185a6e9]" started-at="2026-04-18T20:42:12 IST" name="tearDown" finished-at="2026-04-18T20:42:12 IST" duration-ms="327" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.FormValidationTests@185a6e9]" started-at="2026-04-18T20:42:12 IST" name="setUp" finished-at="2026-04-18T20:42:17 IST" duration-ms="4337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyExistingUsernameShowsSignUpAlert()[pri:0, instance:com.srm.demoblaze.tests.FormValidationTests@185a6e9]" started-at="2026-04-18T20:42:17 IST" name="verifyExistingUsernameShowsSignUpAlert" description="Attempt to sign up with an already-existing username and verify the alert message" finished-at="2026-04-18T20:42:22 IST" duration-ms="4995" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistingUsernameShowsSignUpAlert -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.FormValidationTests@185a6e9]" started-at="2026-04-18T20:42:22 IST" name="tearDown" finished-at="2026-04-18T20:42:22 IST" duration-ms="365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.demoblaze.tests.FormValidationTests@185a6e9]" started-at="2026-04-18T20:42:22 IST" name="setUp" finished-at="2026-04-18T20:42:27 IST" duration-ms="4787" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyModalFieldsRetainEnteredText()[pri:0, instance:com.srm.demoblaze.tests.FormValidationTests@185a6e9]" started-at="2026-04-18T20:42:27 IST" name="verifyModalFieldsRetainEnteredText" description="Verify all modal fields accept and retain the entered text correctly" finished-at="2026-04-18T20:42:31 IST" duration-ms="4109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyModalFieldsRetainEnteredText -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.demoblaze.tests.FormValidationTests@185a6e9]" started-at="2026-04-18T20:42:31 IST" name="tearDown" finished-at="2026-04-18T20:42:31 IST" duration-ms="336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.srm.demoblaze.tests.FormValidationTests -->
+    </test> <!-- DemoBlaze Functional Tests -->
+  </suite> <!-- DemoBlaze Automation Suite -->
+</testng-results>
