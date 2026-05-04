@@ -1,118 +1,172 @@
-# 📦 DemoBlaze Selenium Automation Framework
+# 🛒 DemoBlaze Automation Framework (Selenium + TestNG)
 
-## 🚀 Overview
+## 📌 Project Overview
 
-This project is a Selenium-Java Automation Test Framework built for the DemoBlaze e-commerce web application.
-It follows the Page Object Model (POM) design pattern and uses TestNG for execution and reporting.
+This project is a **Selenium-based Automation Test Framework** built for the DemoBlaze e-commerce application.
 
-The framework automates end-to-end user workflows including authentication, product browsing, cart operations, and order placement.
+It automates complete end-to-end user workflows including:
+
+* User Authentication (Signup, Login, Logout)
+* Product Browsing
+* Cart Management
+* Order Placement
+* Form Validations
+
+The framework follows **industry best practices** such as:
+
+* Page Object Model (POM)
+* Data-driven testing using Excel
+* TestNG for execution
+* Extent Reports for reporting
+* Screenshot capture on failure
+
+---
+
+## 🚀 Tech Stack
+
+* **Language:** Java
+* **Automation Tool:** Selenium WebDriver
+* **Test Framework:** TestNG
+* **Build Tool:** Maven
+* **Reporting:** ExtentReports
+* **Data Handling:** Apache POI (Excel)
+* **Driver Management:** WebDriverManager
 
 ---
 
 ## 🌐 Application Under Test
 
-* URL: https://www.demoblaze.com
-* Type: Single Page Application (SPA)
-* Domain: Electronics E-commerce
+👉 https://www.demoblaze.com
 
 ---
 
-## 🧠 Tech Stack
+## 🏗️ Framework Architecture
 
-* Java
-* Selenium WebDriver
-* TestNG
-* WebDriverManager
-* ExtentReports
-* Maven
-
----
-
-## 📂 Project Structure
+This project follows the **Page Object Model (POM)** design pattern:
 
 ```
-src/
- ├── main/java
- │    ├── base/              # Base classes (Driver setup, utilities)
- │    ├── pages/             # Page Object classes
- │    ├── utils/             # Config reader, helpers
- │
- ├── test/java
- │    ├── tests/             # Test classes
- │    ├── listeners/         # TestNG listeners (screenshots)
- │
- ├── resources/
- │    ├── config.properties
- │    ├── testng.xml
- │
- ├── screenshots/
- ├── reports/
+DemoBlaze/
+│
+├── src/main/java/com/srm/demoblaze/
+│   ├── config/
+│   │   └── ConfigReader.java
+│   ├── driver/
+│   │   └── DriverFactory.java
+│   ├── model/
+│   │   ├── UserCredentials.java
+│   │   └── OrderDetails.java
+│   ├── pages/
+│   │   ├── BasePage.java
+│   │   ├── HomePage.java
+│   │   ├── LoginModalPage.java
+│   │   ├── SignupModalPage.java
+│   │   ├── ProductDetailPage.java
+│   │   ├── CartPage.java
+│   │   └── OrderModalPage.java
+│   └── utils/
+│       └── ExcelUtil.java
+│
+├── src/test/java/com/srm/demoblaze/
+│   ├── base/
+│   │   └── BaseTest.java
+│   ├── listeners/
+│   │   ├── TestListener.java
+│   │   └── ExtentReportManager.java
+│   ├── testdata/
+│   │   └── TestDataFactory.java
+│   └── tests/
+│       ├── AuthenticationTests.java
+│       ├── ProductBrowseTests.java
+│       ├── CartTests.java
+│       ├── OrderTests.java
+│       └── FormValidationTests.java
+│
+├── src/test/resources/
+│   ├── config.properties
+│   └── testdata.xlsx
+│
+├── screenshots/
+├── test-output/
+└── pom.xml
 ```
 
 ---
 
-## 🔥 Features Implemented
+## 🧪 Test Coverage
 
-### ✅ User Authentication
+### ✅ Authentication
 
-* Sign Up via modal
-* Login with valid/invalid credentials
-* Logout functionality
-* Alert validations
+* Sign up with unique credentials
+* Login with valid credentials
+* Login with invalid credentials
+* Logout verification
 
 ### ✅ Product Browsing
 
-* Category filtering (Phones, Laptops, Monitors)
-* Product detail verification
-* Home navigation validation
+* Filter products by category
+* View product details
+* Navigate back to home
 
-### ✅ Shopping Cart
+### ✅ Cart
 
 * Add product to cart
-* Multiple product handling
-* Delete item from cart
-* Total price validation
+* Add multiple products
+* Delete product
+* Validate total price
 
 ### ✅ Order Placement
 
-* Fill order form and confirm purchase
-* Validate confirmation message
-* Order ID verification
+* Place order with valid details
+* Verify confirmation message and order ID
+* Validate empty field behavior
 
-### ✅ Form Validations
+### ✅ Form Validation
 
-* Existing user signup validation
+* Duplicate signup handling
 * Empty login validation
-* Input field checks
+* Modal input validation
 
 ---
 
-## 🏗️ Framework Design
+## 📊 Data-Driven Testing (Excel)
 
-### 🔹 Page Object Model (POM)
+Test data is managed using **Excel (Apache POI)**.
 
-* Separate classes for each page:
+### 📁 File:
 
-  * HomePage
-  * LoginModalPage
-  * ProductDetailPage
-  * CartPage
-  * OrderModalPage
-* All locators and actions inside page classes
-* No WebDriver code in test classes
+```
+src/test/resources/testsdata.xlsx
+```
 
-### 🔹 Base Classes
+### 📄 Sheets:
 
-* Common utilities (waits, actions)
-* Driver initialization
+#### 🔹 LoginSignup
+
+| username | password |
+| -------- | -------- |
+| user1    | pass1    |
+| user2    | wrong    |
+
+#### 🔹 Order
+
+| Name    | Country | City   | Credit card | Month | Year |
+| ------- | ------- | ------ | ----------- | ----- | ---- |
+| Deepika | India   | Bhopal | 2345698765  | 1     | 2029 |
+
+✔ Login and Order tests fetch data dynamically from Excel
+✔ Improves scalability and maintainability
 
 ---
 
 ## ⚙️ Configuration
 
-All configs are stored in:
+All configurations are managed in:
 
-`config.properties`
+```
+src/test/resources/config.properties
+```
+
+Example:
 
 ```
 browser=chrome
@@ -122,33 +176,23 @@ timeout=10
 
 ---
 
-## ⏱️ Wait Strategy
+## 🧠 Key Features
 
-* Uses WebDriverWait + ExpectedConditions
-* No Thread.sleep()
-
----
-
-## 📊 Test Execution
-
-Run tests using:
-
-```
-mvn test
-```
-
-Test suite defined in:
-
-```
-testng.xml
-```
+* ✅ Page Object Model (POM)
+* ✅ Reusable and maintainable design
+* ✅ Data-driven testing using Excel
+* ✅ WebDriverManager integration
+* ✅ Explicit waits (no Thread.sleep)
+* ✅ Screenshot capture on failure
+* ✅ ExtentReports HTML reporting
+* ✅ Clean separation of concerns
 
 ---
 
-## 📸 Screenshot on Failure
+## 📸 Screenshot Capture
 
-* Implemented using TestNG ITestListener
-* Screenshots saved in:
+* Automatically captures screenshots on test failure
+* Stored in:
 
 ```
 /screenshots/
@@ -156,52 +200,65 @@ testng.xml
 
 ---
 
-## 📈 Reporting
+## 📈 Test Reports
 
-* ExtentReports generates HTML reports
-* Includes:
-
-  * Test status
-  * Logs
-  * Screenshots on failure
-
----
-
-## 🔄 Data-Driven Testing
-
-* Implemented using @DataProvider
-* Supports:
-
-  * Valid credentials
-  * Invalid credentials
-
----
-
-## ⭐ Best Practices Followed
-
-* No hardcoded values
-* Reusable components
-* Clean code structure
-* Proper naming conventions
-* Separation of concerns
-
----
-
-## ⚡ Optional Enhancements
-
-* Parallel execution
-* Excel/JSON DataProvider
-* Retry mechanism
-* Headless execution
-* FluentWait usage
-
----
-
-## 👨‍💻 How to Run
-
-1. Clone the repository
-2. Install dependencies:
+* Generated using **ExtentReports**
+* Located in:
 
 ```
-mvn clean install
+/test-output/
 ```
+
+Includes:
+
+* Test status (Pass/Fail)
+* Logs
+* Screenshots (on failure)
+
+---
+
+## ▶️ How to Run the Project
+
+### 1. Clone Repository
+
+```
+git clone https://github.com/your-username/DemoBlaze.git
+```
+
+### 2. Navigate to Project
+
+```
+cd DemoBlaze
+```
+
+### 3. Run Tests
+
+```
+* Right-click `testng.xml`
+* Run as → TestNG Suite
+
+```
+
+---
+
+## 📌 Important Notes
+
+* No hardcoded credentials (all managed via Excel/config)
+* No Thread.sleep() used (explicit waits implemented)
+* Tests executed via TestNG XML
+* Framework designed for scalability
+
+---
+
+## 👩‍💻 Author
+
+**Deepika Kantheti**
+
+
+---
+
+## ⭐ Acknowledgment
+
+This project was developed as part of a Selenium Automation Hackathon to demonstrate real-world test automation framework design.
+
+---
